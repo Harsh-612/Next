@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.loader {
+  height: 100vh;
+}
+.wrapper {
+  height: 150vh;
+  color: #333333;
+}
+.main1 {
+  height: calc(110vh);
+  text-transform: uppercase;
+}
+nav {
+  z-index: 1;
+  position: fixed;
+}
+.light {
+  background: #007dbe;
+}
