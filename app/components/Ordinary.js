@@ -42,6 +42,20 @@ const Ordinary = () => {
       }
     );
     gsap.fromTo(
+      "span",
+      {
+        x: -1300,
+        color: "#3B82F6",
+      },
+      {
+        color: "#8F91A2",
+        x: 0,
+        duration: 2,
+        delay: 3,
+        ease: "ease-in",
+      }
+    );
+    gsap.fromTo(
       "section>div>div>button",
       {
         opacity: 0,
