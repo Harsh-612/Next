@@ -30,7 +30,7 @@ const Ordinary = () => {
     gsap.fromTo(
       "section>div>h1",
       {
-        x: -1150,
+        x: -1300,
         color: "#3B82F6",
       },
       {
