@@ -1,9 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-::-webkit-scrollbar-track {
-  background: #007DBE;
-}
 .loader {
   height: 100vh;
 }
@@ -21,7 +18,4 @@ nav {
 }
 .light {
   background: #007dbe;
-}
-span{
-  background:#8F91A2;
 }

@@ -48,7 +48,7 @@ const Ordinary = () => {
         color: "#3B82F6",
       },
       {
-        color: "#8F91A2",
+        color: "#007DBE",
         x: 0,
         duration: 2,
         delay: 3,
@@ -112,18 +112,20 @@ const Ordinary = () => {
       <section className="main1 flex w-full justify-center items-center text-7xl font-bold font-sans">
         <div className="flex flex-col items-center gap-3">
           <h1>Empowering Young Minds</h1>
-          <h1>with <span>Legal</span> Wisdom</h1>
-          <div className="flex mt-10 text-2xl gap-10">
-            <button className="light px-2 py-1 text-white font-normal">
+          <h1>
+            with <span>Legal Wisdom</span>
+          </h1>
+          <div className="flex mt-10 text-2xl gap-14">
+            <button className="light px-3 py-2 text-white font-normal">
               REGISTER NOW
             </button>
-            <button className="border-black border-2 px-2 py-1">
+            <button className="border-black border-2 px-3 py-2">
               LEARN MORE
             </button>
           </div>
         </div>
       </section>
-      <footer className="absolute w-full bottom-0 h-16 border-t border-gray-400 flex justify-center items-center text-gray-300 font-light text-sm">
+      <footer className="absolute w-full bottom-0 h-16 border-t border-gray-400 flex justify-center items-center text-gray-600 font-light text-sm">
         By NexTech
       </footer>
     </div>
