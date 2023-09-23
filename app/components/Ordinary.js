@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Link from "next/link";
+import Nav from "./Nav";
 gsap.registerPlugin(ScrollTrigger);
 const Ordinary = () => {
   useEffect(() => {
@@ -82,33 +82,7 @@ const Ordinary = () => {
 
   return (
     <div className="w-full wrapper relative bg-sky-50">
-      <nav className="h-20 w-full border-b border-gray-400 flex px-10 py-8 items-center justify-between bg-white">
-        <div className="part1 flex">
-          <img
-            src="/Images/logo.png"
-            width={187}
-            height={47}
-            alt="Logo"
-            className="logo1"
-          />
-        </div>
-        <div className="part2 flex items-center gap-12 text-xl">
-          <Link href="learn">
-            <div>Learn</div>
-          </Link>
-          <Link href="glossary">
-            <div>Glossary</div>
-          </Link>
-          <Link href="forum">
-            <div>Forum</div>
-          </Link>
-          <Link href="account">
-            <button className="light h-full py-1 px-2 rounded text-white">
-              Account
-            </button>
-          </Link>
-        </div>
-      </nav>
+      <Nav />
       <section className="main1 flex w-full justify-center items-center text-7xl font-bold font-sans">
         <div className="flex flex-col items-center gap-3">
           <h1>Empowering Young Minds</h1>
