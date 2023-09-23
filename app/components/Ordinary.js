@@ -30,11 +30,25 @@ const Ordinary = () => {
     gsap.fromTo(
       "section>div>h1",
       {
-        x: -1150,
+        x: -1300,
         color: "#3B82F6",
       },
       {
         color: "#333333",
+        x: 0,
+        duration: 2,
+        delay: 3,
+        ease: "ease-in",
+      }
+    );
+    gsap.fromTo(
+      "span",
+      {
+        x: -1300,
+        color: "#3B82F6",
+      },
+      {
+        color: "#8F91A2",
         x: 0,
         duration: 2,
         delay: 3,
@@ -98,7 +112,7 @@ const Ordinary = () => {
       <section className="main1 flex w-full justify-center items-center text-7xl font-bold font-sans">
         <div className="flex flex-col items-center gap-3">
           <h1>Empowering Young Minds</h1>
-          <h1>with Legal Wisdom</h1>
+          <h1>with <span>Legal</span> Wisdom</h1>
           <div className="flex mt-10 text-2xl gap-10">
             <button className="light px-2 py-1 text-white font-normal">
               REGISTER NOW
