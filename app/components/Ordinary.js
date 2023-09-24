@@ -51,11 +51,11 @@ const Ordinary = () => {
       delay: 2.5,
     });
     gsap.to(".slider", {
-      y: 20,
+      y: -20,
       yoyo: true,
       repeat: -1,
       duration: 0.5,
-      delay: 4.5,
+      delay: 2.5,
     });
   }, []);
   useEffect(() => {
@@ -135,10 +135,10 @@ const Ordinary = () => {
           </div>
         </div>
         <button
-          className="fixed bottom-10 border rounded-full bg-blue-800 border-gray-400 sm:text-xl text-2xl sm:px-3 sm:py-1 px-4 py-2 slider text-white sm:font-light"
+          className="fixed bottom-10 border rounded-full bg-blue-800 border-gray-400 sm:text-2xl text-2xl sm:px-3 sm:py-1 px-4 py-2 slider text-white font-light"
           onClick={scrollToBottom}
         >
-          Slide ↓
+          SLIDE ↓
         </button>
       </section>
       <section className="featureWrapper flex items-center justify-center flex-col">

@@ -23,7 +23,7 @@ nav {
   background: #007dbe;
 }
 .glossarySection {
-  height: calc(150vh - 80px);
+  height: calc(1400vh - 80px);
 }
 .sidebar {
   height: calc(150vh - 80px);
@@ -50,6 +50,9 @@ nav {
 }
 .slider {
   display: none;
+}
+.vertical {
+  height: 1400vh;
 }
 @media (max-width: 640px) {
   img {
