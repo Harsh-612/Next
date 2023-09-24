@@ -128,24 +128,28 @@ const Ordinary = () => {
               src="/Images/Authentication.png"
               className="h-4/5 m-auto py-3 px-6"
             />
-            <h1 className="text-lg w-full text-center">
+            <h1 className="mt-2 text-lg w-full text-center">
               Secure Authentication
             </h1>
           </article>
           <article className=" w-56 h-56 rounded-2xl bg-white border border-gray-300">
             <img src="/Images/Forum.png" className="h-4/5 m-auto py-3 px-6" />
-            <h1 className="text-lg w-full text-center">Public Forum</h1>
+            <h1 className="mt-2 text-lg w-full text-center">Public Forum</h1>
           </article>
           <article className=" w-56 h-56 rounded-2xl bg-white border border-gray-300">
             <img
               src="/Images/Glossary.png"
               className="h-4/5 m-auto py-3 px-6"
             />
-            <h1 className="text-lg w-full text-center">Extensive Glossary</h1>
+            <h1 className="mt-2 text-lg w-full text-center">
+              Extensive Glossary
+            </h1>
           </article>
           <article className=" w-56 h-56 rounded-2xl bg-white border border-gray-300">
             <img src="/Images/Learn.png" className="h-4/5 m-auto py-3 px-6" />
-            <h1 className="text-lg w-full text-center">Interactive Learning</h1>
+            <h1 className="mt-2 text-lg w-full text-center">
+              Interactive Learning
+            </h1>
           </article>
         </div>
       </section>
