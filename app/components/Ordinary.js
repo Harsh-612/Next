@@ -67,6 +67,18 @@ const Ordinary = () => {
         delay: 5,
       }
     );
+    gsap.to(".slider", {
+      display: "block",
+      duration: 0.5,
+      delay: 5.5,
+    });
+    gsap.to(".slider", {
+      y: 20,
+      yoyo: true,
+      repeat: -1,
+      duration: 0.5,
+      delay: 6,
+    });
   }, []);
   useEffect(() => {
     ScrollTrigger.create({
@@ -99,7 +111,32 @@ const Ordinary = () => {
         }
       ),
     });
+    ScrollTrigger.create({
+      trigger: "section>div>div>button",
+      start: "top 57%",
+      end: "top 32%",
+      //markers: true,
+      scrub: 2,
+      animation: gsap.fromTo(
+        ".slider",
+        {
+          scale: 1,
+          opacity: 1,
+        },
+        {
+          scale: 0,
+          opacity: 0,
+        }
+      ),
+    });
   }, []);
+  const scrollToBottom = () => {
+    const pageHeight = document.body.scrollHeight;
+    window.scrollTo({
+      top: pageHeight,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className="w-full wrapper relative bg-sky-50">
@@ -111,14 +148,20 @@ const Ordinary = () => {
             with <span>Legal Wisdom</span>
           </h1>
           <div className="flex mt-10 text-2xl gap-14">
-            <button className="light px-3 py-2 text-white font-normal">
+            <button className="light px-3 py-2 text-white font-normal rounded-lg">
               REGISTER NOW
             </button>
-            <button className="border-black border-2 px-3 py-2">
+            <button className="border-black border-2 px-3 py-2 rounded-lg">
               LEARN MORE
             </button>
           </div>
         </div>
+        <button
+          className="fixed bottom-10 border rounded-full bg-white text-lg px-3 py-1 slider"
+          onClick={scrollToBottom}
+        >
+          Slide↓
+        </button>
       </section>
       <section className="featureWrapper flex items-center justify-center flex-col">
         <h1 className="mb-10 text-5xl">OUR FEATURES</h1>
