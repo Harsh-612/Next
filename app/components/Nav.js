@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 const Nav = () => {
   return (
-    <nav className="h-20 w-full border-b border-gray-400 flex px-10 py-8 items-center justify-between bg-white">
+    <nav className="h-20 w-full border-b border-gray-400 flex px-10 py-9 items-center justify-between bg-white">
       <div className="part1 flex">
         <Link href="/">
           <img
