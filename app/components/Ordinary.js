@@ -7,28 +7,6 @@ gsap.registerPlugin(ScrollTrigger);
 const Ordinary = () => {
   useEffect(() => {
     gsap.fromTo(
-      "nav",
-      {
-        y: -100,
-      },
-      {
-        y: 0,
-        duration: 1.5,
-      }
-    );
-    gsap.fromTo(
-      "nav>div",
-      {
-        y: -100,
-      },
-      {
-        y: 0,
-        duration: 1,
-        stagger: 0.5,
-        delay: 1.5,
-      }
-    );
-    gsap.fromTo(
       "section>div>h1",
       {
         x: -1300,
@@ -38,7 +16,7 @@ const Ordinary = () => {
         color: "#333333",
         x: 0,
         duration: 2,
-        delay: 3,
+        delay: 0,
         ease: "ease-in",
       }
     );
@@ -52,7 +30,7 @@ const Ordinary = () => {
         color: "#007DBE",
         x: 0,
         duration: 2,
-        delay: 3,
+        delay: 0,
         ease: "ease-in",
       }
     );
@@ -64,20 +42,20 @@ const Ordinary = () => {
       {
         opacity: 1,
         duration: 1,
-        delay: 5,
+        delay: 2,
       }
     );
     gsap.to(".slider", {
       display: "block",
-      duration: 0.5,
-      delay: 5.5,
+      duration: 1,
+      delay: 2.5,
     });
     gsap.to(".slider", {
       y: 20,
       yoyo: true,
       repeat: -1,
       duration: 0.5,
-      delay: 6,
+      delay: 4.5,
     });
   }, []);
   useEffect(() => {
@@ -96,7 +74,7 @@ const Ordinary = () => {
       start: "top 57%",
       end: "top 32%",
       //markers: true,
-      scrub: 2,
+      scrub: 5,
       animation: gsap.fromTo(
         ".featureWrapper",
         {
@@ -116,7 +94,7 @@ const Ordinary = () => {
       start: "top 57%",
       end: "top 32%",
       //markers: true,
-      scrub: 2,
+      scrub: 5,
       animation: gsap.fromTo(
         ".slider",
         {
@@ -141,13 +119,13 @@ const Ordinary = () => {
   return (
     <div className="w-full wrapper relative bg-sky-50">
       <Nav />
-      <section className="main1 flex flex-col w-full justify-center items-center text-7xl font-bold font-sans">
+      <section className="main1 flex flex-col w-full justify-center items-center sm:text-7xl font-bold font-sans text-2xl">
         <div className="flex flex-col items-center gap-3 scrollbox">
           <h1>Empowering Young Minds</h1>
           <h1>
             with <span>Legal Wisdom</span>
           </h1>
-          <div className="flex mt-10 text-2xl gap-14">
+          <div className="flex mt-10 sm:text-2xl text-base sm:gap-14 gap-4">
             <button className="light px-3 py-2 text-white font-normal rounded-lg">
               REGISTER NOW
             </button>
@@ -157,40 +135,50 @@ const Ordinary = () => {
           </div>
         </div>
         <button
-          className="fixed bottom-10 border rounded-full bg-white text-lg px-3 py-1 slider"
+          className="fixed bottom-10 border rounded-full bg-blue-800 border-gray-400 sm:text-xl text-2xl sm:px-3 sm:py-1 px-4 py-2 slider text-white sm:font-light"
           onClick={scrollToBottom}
         >
-          Slide↓
+          Slide ↓
         </button>
       </section>
       <section className="featureWrapper flex items-center justify-center flex-col">
-        <h1 className="mb-10 text-5xl">OUR FEATURES</h1>
-        <div className="features flex gap-5 mt-5">
-          <article className=" w-56 h-56 rounded-2xl bg-white border border-gray-300">
+        <h1 className="sm:mb-10 sm:mt-0 -mt-5  mb-5 sm:text-5xl text-2xl">
+          OUR FEATURES
+        </h1>
+        <div className="features sm:flex gap-5 mt-5 grid grid-cols-2 grid-rows-2 gap-x-3 gap-y-3">
+          <article className=" sm:w-56 sm:h-56 w-40 h-40  rounded-2xl bg-white border border-gray-400 ">
             <img
               src="/Images/Authentication.png"
-              className="h-4/5 m-auto py-3 px-6"
+              className="sm:h-4/5 w-full border-gray-200 h-3/4 border-b m-auto py-3 px-6"
             />
-            <h1 className="mt-2 text-lg w-full text-center">
+            <h1 className="mt-2 sm:text-lg text-sm w-full text-center">
               Secure Authentication
             </h1>
           </article>
-          <article className=" w-56 h-56 rounded-2xl bg-white border border-gray-300">
-            <img src="/Images/Forum.png" className="h-4/5 m-auto py-3 px-6" />
-            <h1 className="mt-2 text-lg w-full text-center">Public Forum</h1>
+          <article className=" sm:w-56 sm:h-56 w-40 h-40 rounded-2xl bg-white border border-gray-400">
+            <img
+              src="/Images/Forum.png"
+              className="sm:h-4/5 w-full border-gray-200 h-3/4 border-b m-auto py-3 px-6"
+            />
+            <h1 className="mt-2 sm:text-lg text-sm w-full text-center">
+              Public Forum
+            </h1>
           </article>
-          <article className=" w-56 h-56 rounded-2xl bg-white border border-gray-300">
+          <article className=" sm:w-56 sm:h-56 w-40 h-40 rounded-2xl bg-white border border-gray-400">
             <img
               src="/Images/Glossary.png"
-              className="h-4/5 m-auto py-3 px-6"
+              className="sm:h-4/5 w-full border-gray-200 h-3/4 border-b m-auto py-3 px-6"
             />
-            <h1 className="mt-2 text-lg w-full text-center">
+            <h1 className="mt-2 sm:text-lg text-sm w-full text-center">
               Extensive Glossary
             </h1>
           </article>
-          <article className=" w-56 h-56 rounded-2xl bg-white border border-gray-300">
-            <img src="/Images/Learn.png" className="h-4/5 m-auto py-3 px-6" />
-            <h1 className="mt-2 text-lg w-full text-center">
+          <article className=" sm:w-56 sm:h-56 w-40 h-40 rounded-2xl bg-white border border-gray-400">
+            <img
+              src="/Images/Learn.png"
+              className="sm:h-4/5 w-full border-gray-200 h-3/4 border-b m-auto py-3 px-6"
+            />
+            <h1 className="mt-2 sm:text-lg text-sm w-full text-center">
               Interactive Learning
             </h1>
           </article>

@@ -1,8 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import "remixicon/fonts/remixicon.css";
 const Nav = () => {
   return (
-    <nav className="h-20 w-full border-b border-gray-400 flex px-10 py-9 items-center justify-between bg-white">
+    <nav className="sm:h-20 h-16 w-full border-b border-gray-400 flex sm:px-10 px-5 sm:py-9 py-3 items-center justify-between bg-white">
       <div className="part1 flex">
         <Link href="/">
           <img
@@ -14,7 +15,7 @@ const Nav = () => {
           />
         </Link>
       </div>
-      <div className="part2 flex items-center gap-12 text-xl">
+      <div className="part2 sm:flex items-center sm:gap-12 sm:text-xl text-base hidden">
         <Link href="learn">
           <div>Learn</div>
         </Link>
@@ -29,6 +30,9 @@ const Nav = () => {
             Account
           </button>
         </Link>
+      </div>
+      <div className="part3 sm:hidden text-2xl font-bold">
+        <i class="ri-menu-3-line"></i>
       </div>
     </nav>
   );

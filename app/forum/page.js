@@ -1,17 +1,18 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Nav from "../components/Nav";
 import { gsap } from "gsap";
 
 const forum = () => {
-  const submit = (e) => {
-    e.preventDefault();
+  const [query, setQuery] = useState("");
+  const animation = () => {
     const form = document.querySelector("form");
     const formChildren = form.children;
     console.log(formChildren);
     for (let i = 0; i < formChildren.length - 1; i++) {
       gsap.to(formChildren[i], {
         opacity: 0,
+        zIndex: -1,
         duration: 0.5,
       });
     }
@@ -26,7 +27,7 @@ const forum = () => {
       }
     );
     gsap.fromTo(
-      ".hidden",
+      ".hiddencontent",
       {
         display: "none",
       },
@@ -36,7 +37,7 @@ const forum = () => {
       }
     );
     gsap.fromTo(
-      ".hidden",
+      ".hiddencontent",
       {
         x: -500,
       },
@@ -46,6 +47,10 @@ const forum = () => {
         duration: 1,
       }
     );
+  };
+  const submit = async (e) => {
+    e.preventDefault();
+    animation();
   };
   useEffect(() => {
     gsap.fromTo(
@@ -104,21 +109,24 @@ const forum = () => {
           Popular Users
         </h1>
       </aside>
-      <section className="absolute top-20 left-1/6 left-1 flex flex-col items-center w-6/12 glossarySection bg-white">
+      <section className="absolute top-20 left-1/6 left-1 flex flex-col items-center w-6/12 glossarySection bg-white border-r border-gray-400">
         <form
           className="flex justify-center py-6 w-full gap-6 border-b border-gray-300 items-center"
           onSubmit={submit}
+          action="/submit"
         >
           <input
             type="text"
-            placeholder="Go ahead, ask your question or share with us!"
+            placeholder="Your turn: share or ask!"
             className="hover:shadow-2xl border border-gray-500 bg-white text-base px-5 py-1 rounded-full w-3/4"
             name="query"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
           />
           <button className="light px-4 py-1 text-white font-normal rounded-2xl postbtn">
             Post
           </button>
-          <div className="hidden absolute text-xl text-white">
+          <div className="hiddencontent hidden absolute text-xl text-white">
             QUESTION POSTED ✈
           </div>
         </form>

@@ -34,7 +34,7 @@ const Loader = () => {
       <img
         src="/Images/logoLoad.png"
         width={187}
-        height={47}
+        height={187}
         alt="Logo"
         className="logo"
       />
