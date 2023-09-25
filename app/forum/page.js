@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import Nav from "../components/Nav";
 import { gsap } from "gsap";
 import "remixicon/fonts/remixicon.css";
+import db from "@/DB/db";
+import DataModel from "@/DB/DataModel";
 const forum = () => {
   const [views, setviews] = useState(0);
   const [answers, setanswers] = useState(0);
