@@ -92,7 +92,7 @@ const forum = () => {
     if (query !== "") {
       setquestions([...questions, query]);
       setQuery("");
-      animation();
+      //animation();
     } else {
       alert("Post cant be empty");
     }
